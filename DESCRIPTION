@@ -1,18 +1,25 @@
 Package: timestampr
 Type: Package
-Title: What the Package Does (Title Case)
+Title: Extract Timestamps from Images and Videos
 Version: 0.1.0
 Authors@R: c(
     person(
-      "Jane", "Doe",
+      "Gota", "Yajima",
       email = "wildlife.hunter0712@gmail.com",
       role = c("aut", "cre")
     )
   )
-Description: More about what it does (maybe more than one line).
-    Continuation lines should be indented.
+Description: Provides tools for extracting timestamp information from images and 
+  videos. The package implements optical character recognition (OCR) to detect and 
+  parse various timestamp formats commonly found in media files, including 
+  surveillance footage, digital camera outputs, and screen recordings. Supports 
+  multiple timestamp formats and offers functions for batch processing of media 
+  files.
 License: MIT + file LICENSE
 Encoding: UTF-8
 LazyData: true
 Roxygen: list(markdown = TRUE)
 RoxygenNote: 7.3.2
+Suggests: 
+    testthat (>= 3.0.0)
+Config/testthat/edition: 3
