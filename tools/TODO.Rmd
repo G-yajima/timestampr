@@ -1,0 +1,6 @@
+---
+title: "TODO"
+output: html_document
+---
+
+-   切り取り済みの写真のタイムスタンプをOCRで認識させる
