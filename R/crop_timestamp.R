@@ -1,13 +1,18 @@
 #' @title Function to Crop the Timestamp Area from an Image
 #' @description ...
 #' @param image_path raw image path
+#' @param media_type image or movie
 #' @importFrom imager width height imsub cimg2magick
 #' @importFrom magick image_flop
 #' @importFrom graphics rasterImage locator
 #' @export
-crop_timestamp <- function(image_path) {
-  image  <- imager::load.image(image_path)
-
+crop_timestamp <- function(image_path, media_type = "image") {
+  if(media_type == "image") {
+    image  <- imager::load.image(image_path)
+  }else{
+    image_path <- extract_frame(image_path)
+    image      <- imager::load.image(image_path)
+  }
   w <- imager::width(image)
   h <- imager::height(image)
 
