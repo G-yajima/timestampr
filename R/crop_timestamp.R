@@ -3,6 +3,7 @@
 #' @param image_path raw image path
 #' @importFrom imager width height imsub cimg2magick
 #' @importFrom magick image_flop
+#' @importFrom graphics rasterImage locator
 #' @export
 crop_timestamp <- function(image_path) {
   image  <- imager::load.image(image_path)
@@ -21,6 +22,7 @@ crop_timestamp <- function(image_path) {
   # マウスでポイントを選択
   points <- locator(n=2)
 
+  x <- y <- NULL
   crp_cimg  <- imager::imsub(image, x > min(points$x), y > imager::height(image)- max(points$y))
   crp_mgick <- imager::cimg2magick(crp_cimg, rotate = TRUE)
   crp_mgick_floped <- magick::image_flop(crp_mgick)

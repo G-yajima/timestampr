@@ -2,6 +2,8 @@
 
 export(crop_timestamp)
 export(detect_date)
+importFrom(graphics,locator)
+importFrom(graphics,rasterImage)
 importFrom(imager,cimg2magick)
 importFrom(imager,height)
 importFrom(imager,imsub)

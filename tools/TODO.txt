@@ -5,6 +5,6 @@ testthat::test_dir("tests/testthat")
 # TODO list
 v 画像からテキストを読み取る
 v 時刻に変換する
-o フレームの抽出
-o 時刻の部分のクリップ
-o vdiffrは使える？
+v フレームの抽出
+v 時刻の部分のクリップ
+v vdiffrは使える？<- 使えなかった...
