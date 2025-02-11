@@ -4,5 +4,7 @@
 #' @importFrom tesseract ocr
 #' @export
 detect_date <- function(image) {
-  return("06/22/2018 05:57PM")
+  text_ocr   <- tesseract::ocr(image)
+  text_clean <- gsub("\n", "", text_ocr)
+  return(text_clean)
 }
