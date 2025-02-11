@@ -1,0 +1,7 @@
+# test code
+devtools::load_all()
+testthat::test_dir("tests/testthat")
+
+# TODO list
+o 画像から時刻を読み取る
+
