@@ -1,4 +1,8 @@
 #' @title detect date function
-#' @description A class representing Money currency
-#' @importFrom R6 R6Class
+#' @description ...
+#' @param image clipped image
+#' @importFrom tesseract ocr
 #' @export
+detect_date <- function(image) {
+  return("06/22/2018 05:57PM")
+}
