@@ -1,8 +1,9 @@
 #' @title XXX
 #' @description ...
 #' @param image_path raw image path
-#' @importFrom av av_video_info height av_video_images
+#' @importFrom av av_video_info av_video_images
 #' @importFrom graphics rasterImage locator
+#' @importFrom imager load.image
 #' @export
 extract_frame <- function(image_path) {
   # image_path <- system.file("extdata", "03-movie.mp4", package = "timestampr")
@@ -15,5 +16,8 @@ extract_frame <- function(image_path) {
                       format = "jpg",
                       trim = trim_frame)
 
-  return(paste0(save_path, "/", "image_000001.jpg"))
+  image_path <- paste0(save_path, "/", "image_000001.jpg")
+  image      <- imager::load.image(image_path)
+
+  return(image)
 }

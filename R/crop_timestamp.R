@@ -10,8 +10,7 @@ crop_timestamp <- function(image_path, media_type = "image") {
   if(media_type == "image") {
     image  <- imager::load.image(image_path)
   }else{
-    image_path <- extract_frame(image_path)
-    image      <- imager::load.image(image_path)
+    image <- extract_frame(image_path)
   }
   w <- imager::width(image)
   h <- imager::height(image)

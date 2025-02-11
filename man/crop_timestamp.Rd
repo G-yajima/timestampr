@@ -4,10 +4,12 @@
 \alias{crop_timestamp}
 \title{Function to Crop the Timestamp Area from an Image}
 \usage{
-crop_timestamp(image_path)
+crop_timestamp(image_path, media_type = "image")
 }
 \arguments{
 \item{image_path}{raw image path}
+
+\item{media_type}{image or movie}
 }
 \description{
 ...
