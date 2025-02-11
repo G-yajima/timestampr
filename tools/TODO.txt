@@ -3,6 +3,6 @@ devtools::load_all()
 testthat::test_dir("tests/testthat")
 
 # TODO list
-o 画像からテキストを読み取る
+x 画像からテキストを読み取る
 o 時刻に変換する
 
